@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Md Shakibul Hasan | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:'Poppins',sans-serif;
+      background:#070b14;
+      color:white;
+      overflow-x:hidden;
+    }
+
+    body::before{
+      content:'';
+      position:fixed;
+      width:500px;
+      height:500px;
+      background:rgba(0,255,255,0.08);
+      filter:blur(120px);
+      top:-100px;
+      left:-100px;
+      z-index:-1;
+    }
+
+    body::after{
+      content:'';
+      position:fixed;
+      width:500px;
+      height:500px;
+      background:rgba(98,0,255,0.1);
+      filter:blur(120px);
+      bottom:-120px;
+      right:-100px;
+      z-index:-1;
+    }
+
+    nav{
+      width:100%;
+      padding:20px 8%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:fixed;
+      top:0;
+      z-index:1000;
+      backdrop-filter:blur(15px);
+      background:rgba(255,255,255,0.04);
+      border-bottom:1px solid rgba(255,255,255,0.08);
+    }
+
+    nav h1{
+      font-size:24px;
+      color:#00f0ff;
+      letter-spacing:1px;
+    }
+
+    nav ul{
+      display:flex;
+      gap:30px;
+      list-style:none;
+    }
+
+    nav ul li a{
+      color:white;
+      text-decoration:none;
+      transition:0.3s;
+      font-size:15px;
+    }
+
+    nav ul li a:hover{
+      color:#00f0ff;
+    }
+
+    .hero{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:120px 8% 60px;
+      gap:60px;
+      flex-wrap:wrap;
+    }
+
+    .hero-text{
+      flex:1;
+      min-width:300px;
+    }
+
+    .hero-text h2{
+      font-size:18px;
+      color:#00f0ff;
+      margin-bottom:10px;
+    }
+
+    .hero-text h1{
+      font-size:60px;
+      line-height:1.1;
+      margin-bottom:20px;
+    }
+
+    .hero-text p{
+      color:#b9c0d0;
+      line-height:1.8;
+      margin-bottom:30px;
+      max-width:650px;
+    }
+
+    .btns{
+      display:flex;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      padding:14px 28px;
+      border-radius:12px;
+      text-decoration:none;
+      color:white;
+      background:rgba(255,255,255,0.08);
+      border:1px solid rgba(255,255,255,0.1);
+      backdrop-filter:blur(15px);
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      transform:translateY(-4px);
+      background:#00f0ff;
+      color:black;
+    }
+
+    .hero-image{
+      flex:1;
+      display:flex;
+      justify-content:center;
+      min-width:300px;
+    }
+
+    .hero-image img{
+      width:360px;
+      border-radius:30px;
+      border:2px solid rgba(255,255,255,0.12);
+      box-shadow:0 0 40px rgba(0,240,255,0.2);
+    }
+
+    section{
+      padding:90px 8%;
+    }
+
+    .section-title{
+      font-size:42px;
+      margin-bottom:50px;
+      color:#00f0ff;
+      text-align:center;
+    }
+
+    .glass-card{
+      background:rgba(255,255,255,0.05);
+      border:1px solid rgba(255,255,255,0.08);
+      backdrop-filter:blur(16px);
+      border-radius:24px;
+      padding:35px;
+      transition:0.3s;
+    }
+
+    .glass-card:hover{
+      transform:translateY(-8px);
+      box-shadow:0 0 30px rgba(0,240,255,0.12);
+    }
+
+    .about p{
+      color:#c9d0de;
+      line-height:1.9;
+      font-size:16px;
+    }
+
+    .skills-grid,
+    .project-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:25px;
+    }
+
+    .skill-box h3,
+    .project-box h3{
+      margin-bottom:10px;
+      color:#00f0ff;
+    }
+
+    .skill-box p,
+    .project-box p{
+      color:#c9d0de;
+      line-height:1.7;
+      font-size:14px;
+    }
+
+    .contact-box{
+      text-align:center;
+    }
+
+    .contact-box p{
+      margin:15px 0;
+      color:#c9d0de;
+    }
+
+    .socials{
+      margin-top:25px;
+      display:flex;
+      justify-content:center;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .socials a{
+      text-decoration:none;
+      color:white;
+      padding:12px 20px;
+      border-radius:12px;
+      background:rgba(255,255,255,0.08);
+      border:1px solid rgba(255,255,255,0.08);
+      transition:0.3s;
+    }
+
+    .socials a:hover{
+      background:#00f0ff;
+      color:black;
+    }
+
+    footer{
+      padding:25px;
+      text-align:center;
+      border-top:1px solid rgba(255,255,255,0.08);
+      color:#9da7bb;
+      margin-top:40px;
+    }
+
+    @media(max-width:900px){
+      .hero-text h1{
+        font-size:42px;
+      }
+
+      nav ul{
+        gap:15px;
+      }
+    }
+
+    @media(max-width:650px){
+      nav{
+        flex-direction:column;
+        gap:12px;
+      }
+
+      nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+      }
+
+      .hero-image img{
+        width:280px;
+      }
+
+      .hero-text h1{
+        font-size:36px;
+      }
+
+      .section-title{
+        font-size:32px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <h1>SHAKIB</h1>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <h2>Hello, I'm</h2>
+      <h1>Md Shakibul Hasan</h1>
+      <h3 id="typing" style="margin-bottom:20px;color:#8be9fd;font-weight:500;"></h3>
+      <p>
+        Creative Designer & CSE Student passionate about coding, photography,
+        designing and building unique ideas. I love turning imagination into
+        reality through creativity and technology.
+      </p>
+
+      <div class="btns">
+        <a href="Md_Shakibul_Hasan_CV.pdf" class="btn" download>Download CV</a>
+        <a href="#projects" class="btn">View Projects</a>
+        <a href="#contact" class="btn">Contact Me</a>
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <img src="Portfolio image.jpeg" alt="Shakib Portfolio Image">
+    </div>
+  </section>
+
+  <section id="about">
+    <h2 class="section-title">About Me</h2>
+
+    <div class="glass-card about">
+      <p>
+        Hey! I’m Shakib — a student, creative designer and tech enthusiast.
+        Day by day I’m learning coding and improving my creative skills.
+        I enjoy making crazy, unique and aesthetic projects that stand out.
+        Whether it’s design, photography or coding — I always try to bring a
+        modern and professional touch to my work.
+      </p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2 class="section-title">My Skills</h2>
+
+    <div class="skills-grid">
+      
+      <div class="glass-card skill-box">
+        <h3>Photography</h3>
+        <p>Creative portrait and aesthetic photography with cinematic vibes.</p>
+        <div style="width:100%;height:8px;background:#1c2333;border-radius:20px;margin-top:15px;overflow:hidden;">
+          <div style="width:92%;height:100%;background:#00f0ff;"></div>
+        </div>
+      </div>
+
+      <div class="glass-card skill-box">
+        <h3>Graphic Design</h3>
+        <p>Modern poster design, branding and social media visuals.</p>
+        <div style="width:100%;height:8px;background:#1c2333;border-radius:20px;margin-top:15px;overflow:hidden;">
+          <div style="width:95%;height:100%;background:#00f0ff;"></div>
+        </div>
+      </div>
+
+      <div class="glass-card skill-box">
+        <h3>C Programming</h3>
+        <p>Learning programming logic, problem solving and coding basics.</p>
+      </div>
+
+      <div class="glass-card skill-box">
+        <h3>Video Editing</h3>
+        <p>Stylish edits with smooth transitions and aesthetic storytelling.</p>
+      </div>
+
+      <div class="glass-card skill-box">
+        <h3>Script Writing</h3>
+        <p>Creative writing and storytelling for unique concepts and ideas.</p>
+      </div>
+
+      <div class="glass-card skill-box">
+        <h3>Office Management</h3>
+        <p>Handling organization, communication and workflow professionally.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2 class="section-title">Projects & Works</h2>
+
+    <div class="project-grid">
+      <div class="glass-card project-box">
+        <h3>Poster Design</h3>
+        <p>Creative and modern poster concepts with aesthetic visual identity.</p>
+      </div>
+
+      <div class="glass-card project-box">
+        <h3>Photography Shots</h3>
+        <p>Portrait photography and cinematic visual storytelling projects.</p>
+      </div>
+
+      <div class="glass-card project-box">
+        <h3>Coding Projects</h3>
+        <p>Small coding projects and learning-based programming experiments.</p>
+      </div>
+
+      <div class="glass-card project-box">
+        <h3>Script Writing</h3>
+        <p>Creative concepts and storytelling-focused writing works.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title">Contact Me</h2>
+
+    <div class="glass-card contact-box">
+      <p><strong>Email:</strong> shakibul2429@gmail.com</p>
+      <p><strong>Phone / WhatsApp:</strong> 01319216797</p>
+
+      <div class="socials">
+        <a href="https://www.facebook.com/share/1Fk1ixVeaf/" target="_blank">Facebook</a>
+        <a href="https://www.instagram.com/shakippee_morcheeeee?igsh=MTBtdWc3Nm1oaTZ6bQ==" target="_blank">Instagram</a>
+        <a href="https://bd.linkedin.com/in/md-shakib-7b0268378" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Md Shakibul Hasan — All Rights Reserved.
+  </footer>
+
+  <script>
+    const texts = ['Creative Designer', 'CSE Student', 'Photographer', 'Frontend Learner'];
+    let count = 0;
+    let index = 0;
+    let currentText = '';
+    let letter = '';
+
+    (function type(){
+      if(count === texts.length){
+        count = 0;
+      }
+
+      currentText = texts[count];
+      letter = currentText.slice(0, ++index);
+
+      document.getElementById('typing').textContent = letter;
+
+      if(letter.length === currentText.length){
+        count++;
+        index = 0;
+      }
+
+      setTimeout(type,120);
+    })();
+
+
+    const sections = document.querySelectorAll('section');
+
+    window.addEventListener('scroll', () => {
+      sections.forEach(sec => {
+        const top = window.scrollY;
+        const offset = sec.offsetTop - 200;
+        const height = sec.offsetHeight;
+
+        if(top >= offset && top < offset + height){
+          sec.style.opacity = '1';
+          sec.style.transform = 'translateY(0px)';
+        }
+      })
+    })
+
+    sections.forEach(sec => {
+      sec.style.opacity = '0';
+      sec.style.transform = 'translateY(40px)';
+      sec.style.transition = '0.8s ease';
+    })
+
+    setTimeout(()=>{
+      sections[0].style.opacity='1';
+      sections[0].style.transform='translateY(0px)';
+    },200)
+  </script>
+
+</body>
+</html>
