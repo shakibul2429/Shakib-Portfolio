@@ -330,6 +330,33 @@ color:#00f7ff;
 text-shadow:0 0 20px #00f7ff;
 transform:scale(1.3);
 }
+.project-container{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:25px;
+margin-top:30px;
+}
+
+.project-card{
+background:rgba(255,255,255,0.08);
+padding:25px;
+width:250px;
+border-radius:20px;
+backdrop-filter:blur(10px);
+transition:0.5s;
+box-shadow:0 0 15px rgba(0,247,255,0.2);
+}
+
+.project-card:hover{
+transform:translateY(-10px) scale(1.05);
+box-shadow:0 0 25px #00f7ff;
+}
+
+.project-card h3{
+margin-bottom:10px;
+color:#00f7ff;
+}
 </style>
 </head>
 <body>
@@ -426,30 +453,34 @@ transform:scale(1.3);
   </section>
 
   <section id="projects" class="reveal">
-    <h2 class="section-title">Projects & Works</h2>
 
-    <div class="project-grid">
-      <div class="glass-card project-box">
-        <h3>Poster Design</h3>
-        <p>Creative and modern poster concepts with aesthetic visual identity.</p>
-      </div>
+<h2>My Projects</h2>
 
-      <div class="glass-card project-box">
-        <h3>Photography Shots</h3>
-        <p>Portrait photography and cinematic visual storytelling projects.</p>
-      </div>
+<div class="project-container">
 
-      <div class="glass-card project-box">
-        <h3>Coding Projects</h3>
-        <p>Small coding projects and learning-based programming experiments.</p>
-      </div>
+<div class="project-card">
+<h3>Poster Design</h3>
+<p>Creative modern poster and branding design works.</p>
+</div>
 
-      <div class="glass-card project-box">
-        <h3>Script Writing</h3>
-        <p>Creative concepts and storytelling-focused writing works.</p>
-      </div>
-    </div>
-  </section>
+<div class="project-card">
+<h3>Photography</h3>
+<p>Professional aesthetic photography and editing shots.</p>
+</div>
+
+<div class="project-card">
+<h3>Coding Project</h3>
+<p>Creative web and programming based projects.</p>
+</div>
+
+<div class="project-card">
+<h3>Script Writing</h3>
+<p>Unique storytelling and creative writing works.</p>
+</div>
+
+</div>
+
+</section>
 
   <section id="contact" class="reveal">
     <h2 class="section-title">Contact Me</h2>
