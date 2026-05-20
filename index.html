@@ -303,6 +303,17 @@ transition:0.1s;
 z-index:9999;
 box-shadow:0 0 20px #00f7ff;
 }
+.reveal{
+position:relative;
+transform:translateY(80px);
+opacity:0;
+transition:all 1s ease;
+}
+
+.reveal.active{
+transform:translateY(0px);
+opacity:1;
+}
 </style>
 </head>
 <body>
@@ -341,7 +352,7 @@ box-shadow:0 0 20px #00f7ff;
     </div>
   </section>
 
-  <section id="about">
+  <section id="about" class="reveal">
     <h2 class="section-title">About Me</h2>
 
     <div class="glass-card about">
@@ -355,7 +366,7 @@ box-shadow:0 0 20px #00f7ff;
     </div>
   </section>
 
-  <section id="skills">
+  <section id="skills" class="reveal">
     <h2 class="section-title">My Skills</h2>
 
     <div class="skills-grid">
@@ -398,7 +409,7 @@ box-shadow:0 0 20px #00f7ff;
     </div>
   </section>
 
-  <section id="projects">
+  <section id="projects" class="reveal">
     <h2 class="section-title">Projects & Works</h2>
 
     <div class="project-grid">
@@ -424,7 +435,7 @@ box-shadow:0 0 20px #00f7ff;
     </div>
   </section>
 
-  <section id="contact">
+  <section id="contact" class="reveal">
     <h2 class="section-title">Contact Me</h2>
 
     <div class="glass-card contact-box">
@@ -502,6 +513,22 @@ document.addEventListener("mousemove",(e)=>{
 cursor.style.left = e.pageX + "px";
 cursor.style.top = e.pageY + "px";
 });
+function reveal(){
+var reveals = document.querySelectorAll(".reveal");
+
+for(var i = 0; i < reveals.length; i++){
+
+var windowheight = window.innerHeight;
+var revealtop = reveals[i].getBoundingClientRect().top;
+var revealpoint = 150;
+
+if(revealtop < windowheight - revealpoint){
+reveals[i].classList.add("active");
+}
+}
+}
+
+window.addEventListener("scroll", reveal);
 </script>
 </body>
 </html>
