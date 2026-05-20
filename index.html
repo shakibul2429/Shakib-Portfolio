@@ -301,6 +301,19 @@ color:#ccc;
 margin-top:10px;
 font-size:14px;
 }
+  .typing{
+color:#00f7ff;
+font-weight:bold;
+border-right:2px solid #00f7ff;
+padding-right:5px;
+animation:blink 0.7s infinite;
+}
+
+@keyframes blink{
+50%{
+border-color:transparent;
+}
+}
   </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
@@ -420,7 +433,10 @@ transform:scale(1.1) translateY(-20px);
 
   <section class="hero" id="home">
     <div class="hero-text">
-      <h2>Hello, I'm</h2>
+     <h2>
+I'm a 
+<span class="typing"></span>
+</h2>
       <h1>Md Shakibul Hasan</h1>
       <h3 id="typing" style="margin-bottom:20px;color:#8be9fd;font-weight:500;"></h3>
       <p>
@@ -610,6 +626,7 @@ transform:scale(1.1) translateY(-20px);
       sections[0].style.opacity='1';
       sections[0].style.transform='translateY(0px)';
     },200)
+  
   </script>
 <script>
 const cursor = document.querySelector(".cursor");
@@ -634,9 +651,46 @@ reveals[i].classList.add("active");
 }
 
 window.addEventListener("scroll", reveal);
+const typingText = document.querySelector(".typing");
+
+const words = [
+"Designer",
+"Photographer",
+"Developer",
+"Script Writer"
+];
+
+let wordIndex = 0;
+let charIndex = 0;
+let currentWord = "";
+let currentChar = "";
+
+function type(){
+
+if(wordIndex < words.length){
+
+currentWord = words[wordIndex];
+currentChar = currentWord.slice(0, ++charIndex);
+
+typingText.textContent = currentChar;
+
+if(currentChar.length == currentWord.length){
+wordIndex++;
+
+if(wordIndex == words.length){
+wordIndex = 0;
+}
+
+charIndex = 0;
+}
+
+setTimeout(type,200);
+}
+}
+
+type();
 </script>
 <footer>
-
 <h3>Md Shakibul Hasan</h3>
 
 <p>Creative Designer | CSE Student | Photographer</p>
