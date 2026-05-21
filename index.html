@@ -622,14 +622,14 @@ setTimeout(type,200);
 }
 }
 type();
+document.getElementById("year").innerHTML =
+new Date().getFullYear();
 </script>
 <footer>
 <h3>Md Shakibul Hasan</h3>
 <p>Creative Designer | CSE Student | Photographer</p>
 <p class="copyright">
-<p>
-  © {new Date().getFullYear()} Md Shakibul Hasan. All rights reserved.
-</p>
+© <span id="year"></span> All Rights Reserved.
 </p>
 </footer>
 </body>
