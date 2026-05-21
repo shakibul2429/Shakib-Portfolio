@@ -15,14 +15,12 @@
       box-sizing:border-box;
       scroll-behavior:smooth;
     }
-
     body{
       font-family:'Poppins',sans-serif;
       background:#070b14;
       color:white;
       overflow-x:hidden;
     }
-
     body::before{
       content:'';
       position:fixed;
@@ -34,7 +32,6 @@
       left:-100px;
       z-index:-1;
     }
-
     body::after{
       content:'';
       position:fixed;
@@ -46,7 +43,6 @@
       right:-100px;
       z-index:-1;
     }
-
     nav{
       width:100%;
       padding:20px 8%;
@@ -60,30 +56,25 @@
       background:rgba(255,255,255,0.04);
       border-bottom:1px solid rgba(255,255,255,0.08);
     }
-
     nav h1{
       font-size:24px;
       color:#00f0ff;
       letter-spacing:1px;
     }
-
     nav ul{
       display:flex;
       gap:30px;
       list-style:none;
     }
-
     nav ul li a{
       color:white;
       text-decoration:none;
       transition:0.3s;
       font-size:15px;
     }
-
     nav ul li a:hover{
       color:#00f0ff;
     }
-
     .hero{
       min-height:100vh;
       display:flex;
@@ -93,37 +84,31 @@
       gap:60px;
       flex-wrap:wrap;
     }
-
     .hero-text{
       flex:1;
       min-width:300px;
     }
-
     .hero-text h2{
       font-size:18px;
       color:#00f0ff;
       margin-bottom:10px;
     }
-
     .hero-text h1{
       font-size:60px;
       line-height:1.1;
       margin-bottom:20px;
     }
-
     .hero-text p{
       color:#b9c0d0;
       line-height:1.8;
       margin-bottom:30px;
       max-width:650px;
     }
-
     .btns{
       display:flex;
       gap:20px;
       flex-wrap:wrap;
     }
-
     .btn{
       padding:14px 28px;
       border-radius:12px;
@@ -134,38 +119,32 @@
       backdrop-filter:blur(15px);
       transition:0.3s;
     }
-
     .btn:hover{
       transform:translateY(-4px);
       background:#00f0ff;
       color:black;
     }
-
     .hero-image{
       flex:1;
       display:flex;
       justify-content:center;
       min-width:300px;
     }
-
     .hero-image img{
       width:360px;
       border-radius:30px;
       border:2px solid rgba(255,255,255,0.12);
       box-shadow:0 0 40px rgba(0,240,255,0.2);
     }
-
     section{
       padding:90px 8%;
     }
-
     .section-title{
       font-size:42px;
       margin-bottom:50px;
       color:#00f0ff;
       text-align:center;
     }
-
     .glass-card{
       background:rgba(255,255,255,0.05);
       border:1px solid rgba(255,255,255,0.08);
@@ -174,47 +153,39 @@
       padding:35px;
       transition:0.3s;
     }
-
     .glass-card:hover{
       transform:translateY(-8px);
       box-shadow:0 0 30px rgba(0,240,255,0.12);
     }
-
     .about p{
       color:#c9d0de;
       line-height:1.9;
       font-size:16px;
     }
-
     .skills-grid,
     .project-grid{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
       gap:25px;
     }
-
     .skill-box h3,
     .project-box h3{
       margin-bottom:10px;
       color:#00f0ff;
     }
-
     .skill-box p,
     .project-box p{
       color:#c9d0de;
       line-height:1.7;
       font-size:14px;
     }
-
     .contact-box{
       text-align:center;
     }
-
     .contact-box p{
       margin:15px 0;
       color:#c9d0de;
     }
-
     .socials{
       margin-top:25px;
       display:flex;
@@ -222,7 +193,6 @@
       gap:20px;
       flex-wrap:wrap;
     }
-
     .socials a{
       text-decoration:none;
       color:white;
@@ -232,12 +202,10 @@
       border:1px solid rgba(255,255,255,0.08);
       transition:0.3s;
     }
-
     .socials a:hover{
       background:#00f0ff;
       color:black;
     }
-
     footer{
       padding:25px;
       text-align:center;
@@ -245,36 +213,29 @@
       color:#9da7bb;
       margin-top:40px;
     }
-
     @media(max-width:900px){
       .hero-text h1{
         font-size:42px;
       }
-
       nav ul{
         gap:15px;
       }
     }
-
     @media(max-width:650px){
       nav{
         flex-direction:column;
         gap:12px;
       }
-
       nav ul{
         flex-wrap:wrap;
         justify-content:center;
       }
-
       .hero-image img{
         width:280px;
       }
-
       .hero-text h1{
         font-size:36px;
       }
-
       .section-title{
         font-size:32px;
       }
@@ -287,16 +248,13 @@ background:rgba(255,255,255,0.05);
 backdrop-filter:blur(10px);
 border-top:1px solid rgba(255,255,255,0.1);
 }
-
 footer h3{
 color:#00f7ff;
 margin-bottom:10px;
 }
-
 footer p{
 color:#ccc;
 }
-
 .copyright{
 margin-top:10px;
 font-size:14px;
@@ -320,16 +278,13 @@ border-color:transparent;
 }
   </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
 <style>
 html{
 scroll-behavior:smooth;
 }
-
 body{
 cursor:none;
 }
-
 .cursor{
 width:20px;
 height:20px;
@@ -348,7 +303,6 @@ transform:translateY(80px);
 opacity:0;
 transition:all 1s ease;
 }
-
 .reveal.active{
 transform:translateY(0px);
 opacity:1;
@@ -356,14 +310,12 @@ opacity:1;
 .social-icons{
 margin-top:20px;
 }
-
 .social-icons a{
 color:white;
 font-size:30px;
 margin:0 15px;
 transition:0.4s;
 }
-
 .social-icons a:hover{
 color:#00f7ff;
 text-shadow:0 0 20px #00f7ff;
@@ -376,7 +328,6 @@ justify-content:center;
 gap:25px;
 margin-top:30px;
 }
-
 .project-card{
 background:rgba(255,255,255,0.08);
 padding:25px;
@@ -386,12 +337,10 @@ backdrop-filter:blur(10px);
 transition:0.5s;
 box-shadow:0 0 15px rgba(0,247,255,0.2);
 }
-
 .project-card:hover{
 transform:translateY(-10px) scale(1.05);
 box-shadow:0 0 25px #00f7ff;
 }
-
 .project-card h3{
 margin-bottom:10px;
 color:#00f7ff;
@@ -409,15 +358,30 @@ radial-gradient(circle at 50% 80%, rgba(0,255,100,0.1), transparent 25%);
 z-index:-1;
 animation:bgmove 10s infinite alternate;
 }
-
 @keyframes bgmove{
 0%{
 transform:scale(1) translateY(0px);
 }
-
 100%{
 transform:scale(1.1) translateY(-20px);
 }
+}
+.gallery-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+margin-top:30px;
+}
+.gallery-container img{
+width:100%;
+border-radius:20px;
+transition:0.5s;
+cursor:pointer;
+box-shadow:0 0 15px rgba(0,247,255,0.2);
+}
+.gallery-container img:hover{
+transform:scale(1.05);
+box-shadow:0 0 25px #00f7ff;
 }
 </style>
 </head>
@@ -518,192 +482,155 @@ Creative Designer & CSE Student passionate about coding, photography, designing 
       </div>
     </div>
   </section>
-
   <section id="projects" class="reveal">
-
 <h2>My Projects</h2>
-
 <div class="project-container">
-
 <div class="project-card">
 <h3>Poster Design</h3>
 <p>Creative modern poster and branding design works.</p>
 </div>
-
 <div class="project-card">
 <h3>Photography</h3>
 <p>Professional aesthetic photography and editing shots.</p>
 </div>
-
 <div class="project-card">
 <h3>Coding Project</h3>
 <p>Creative web and programming based projects.</p>
 </div>
-
 <div class="project-card">
 <h3>Script Writing</h3>
 <p>Unique storytelling and creative writing works.</p>
 </div>
-
 </div>
-
 </section>
-
-  <section id="contact" class="reveal">
+<section id="gallery" class="reveal">
+<h2>Photography Gallery</h2>
+<div class="gallery-container">
+<img src="https://picsum.photos/300?1">
+<img src="https://picsum.photos/300?2">
+<img src="https://picsum.photos/300?3">
+<img src="https://picsum.photos/300?4">
+<img src="https://picsum.photos/300?5">
+<img src="https://picsum.photos/300?6">
+</div>
+</section>  
+<section id="contact" class="reveal">
     <h2 class="section-title">Contact Me</h2>
-
     <div class="glass-card contact-box">
       <p><strong>Email:</strong> shakibul2429@gmail.com</p>
       <p><strong>Phone / WhatsApp:</strong> 01319216797</p>
-
       <div class="socials">
         <div class="social-icons">
-
 <a href="https://www.facebook.com/share/1Fk1ixVeaf/" target="_blank">
 <i class="fab fa-facebook"></i>
 </a>
-
 <a href="https://www.instagram.com/shakippee_morcheeeee?igsh=MTBtdWc3Nm1oaTZ6bQ==" target="_blank">
 <i class="fab fa-instagram"></i>
 </a>
-
 <a href="https://bd.linkedin.com/in/md-shakib-7b0268378" target="_blank">
 <i class="fab fa-linkedin"></i>
 </a>
-
 </div>
       </div>
     </div>
   </section>
-
   <footer>
     © 2026 Md Shakibul Hasan — All Rights Reserved.
   </footer>
-
   <script>
     const texts = ['Creative Designer', 'CSE Student', 'Photographer', 'Frontend Learner'];
     let count = 0;
     let index = 0;
     let currentText = '';
     let letter = '';
-
     (function type(){
       if(count === texts.length){
         count = 0;
       }
-
       currentText = texts[count];
       letter = currentText.slice(0, ++index);
-
       document.getElementById('typing').textContent = letter;
-
       if(letter.length === currentText.length){
         count++;
         index = 0;
       }
-
       setTimeout(type,120);
     })();
-
-
     const sections = document.querySelectorAll('section');
-
     window.addEventListener('scroll', () => {
       sections.forEach(sec => {
         const top = window.scrollY;
         const offset = sec.offsetTop - 200;
         const height = sec.offsetHeight;
-
         if(top >= offset && top < offset + height){
           sec.style.opacity = '1';
           sec.style.transform = 'translateY(0px)';
         }
       })
     })
-
     sections.forEach(sec => {
       sec.style.opacity = '0';
       sec.style.transform = 'translateY(40px)';
       sec.style.transition = '0.8s ease';
     })
-
     setTimeout(()=>{
       sections[0].style.opacity='1';
       sections[0].style.transform='translateY(0px)';
     },200)
-  
+
   </script>
 <script>
 const cursor = document.querySelector(".cursor");
-
 document.addEventListener("mousemove",(e)=>{
 cursor.style.left = e.pageX + "px";
 cursor.style.top = e.pageY + "px";
 });
 function reveal(){
 var reveals = document.querySelectorAll(".reveal");
-
 for(var i = 0; i < reveals.length; i++){
-
 var windowheight = window.innerHeight;
 var revealtop = reveals[i].getBoundingClientRect().top;
 var revealpoint = 150;
-
 if(revealtop < windowheight - revealpoint){
 reveals[i].classList.add("active");
 }
 }
 }
-
 window.addEventListener("scroll", reveal);
 const typingText = document.querySelector(".typing");
-
 const words = [
 "Designer",
 "Photographer",
 "Developer",
 "Script Writer"
 ];
-
 let wordIndex = 0;
 let charIndex = 0;
 let currentWord = "";
 let currentChar = "";
-
 function type(){
-
 if(wordIndex < words.length){
-
 currentWord = words[wordIndex];
 currentChar = currentWord.slice(0, ++charIndex);
-
 typingText.textContent = currentChar;
-
 if(currentChar.length == currentWord.length){
 wordIndex++;
-
 if(wordIndex == words.length){
 wordIndex = 0;
 }
-
 charIndex = 0;
 }
-
 setTimeout(type,200);
 }
 }
-
 type();
 </script>
 <footer>
 <h3>Md Shakibul Hasan</h3>
-
 <p>Creative Designer | CSE Student | Photographer</p>
-
 <p class="copyright">
 © 2026 All Rights Reserved.
 </p>
-
 </footer>
 </body>
 </html>
